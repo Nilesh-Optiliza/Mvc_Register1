@@ -29,21 +29,21 @@
                     @Html.TextBoxFor(m => m.StudentName)
                 </td>
             </tr>
-            <tr>
+            @*<tr>
                 <td>
                     Gender:
                 </td>
                 <td>
                     @Html.TextBoxFor(m => m.Gender)
                 </td>
-            </tr>
+            </tr>*@
             <tr>
                 <td>
                     Gender :
                 </td>
                 <td>
-                    @Html.RadioButton("Gender",true)Male
-                    @Html.RadioButton("Gender",false)Female
+                    @Html.RadioButton("Gender","Male")Male
+                    @Html.RadioButton("Gender","Female")Female
                 </td>
             </tr>
             <tr>
