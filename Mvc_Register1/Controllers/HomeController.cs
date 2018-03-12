@@ -25,7 +25,7 @@ namespace Mvc_Register1.Controllers
             fruit.Fruits = PopulateFruits();
             var selectedItem = fruit.Fruits.Find(p => p.Value == fruit.FruitId.ToString());
             string gen = "";
-            if(fruit.Gender==false)
+            if(fruit.Gender=="Male")
             {
                 gen = "Male";
             }
