@@ -25,7 +25,7 @@ namespace Mvc_Register1.Controllers
             fruit.Fruits = PopulateFruits();
             var selectedItem = fruit.Fruits.Find(p => p.Value == fruit.FruitId.ToString());
             string gen = "";
-            if(fruit.Gender==false)
+            if(fruit.Gender=="Male")
             {
                 gen = "Male";
             }
@@ -82,6 +82,11 @@ namespace Mvc_Register1.Controllers
             }
 
             return items;
+        }
+        public ActionResult Display1()
+        {
+            MVCEntities1 entities = new MVCEntities1();
+            return View( from Student in entities.Students.Take(10) select Student);
         }
     }
 }

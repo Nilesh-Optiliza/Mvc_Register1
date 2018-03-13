@@ -8,10 +8,11 @@ namespace Mvc_Register1.Models
 {
     public class FruitModel
     {
+       
         public List<SelectListItem> Fruits { get; set; }
         public int? FruitId { get; set; }
         public string  StudentName { get; set; }
-        public bool Gender { get; set; }
+        public string Gender { get; set; }
 
     }
 }

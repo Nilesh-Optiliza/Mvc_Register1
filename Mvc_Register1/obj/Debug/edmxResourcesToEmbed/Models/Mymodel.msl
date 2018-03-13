@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="MVCModelStoreContainer" CdmEntityContainer="MVCEntities">
-    <EntitySetMapping Name="StudCourses">
-      <EntityTypeMapping TypeName="MVCModel.StudCourse">
-        <MappingFragment StoreEntitySet="StudCourse">
-          <ScalarProperty Name="StudCorseId" ColumnName="StudCorseId" />
-          <ScalarProperty Name="Course" ColumnName="Course" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+  <EntityContainerMapping StorageEntityContainer="MVCModelStoreContainer" CdmEntityContainer="MVCEntities1">
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="MVCModel.Student">
         <MappingFragment StoreEntitySet="Students">

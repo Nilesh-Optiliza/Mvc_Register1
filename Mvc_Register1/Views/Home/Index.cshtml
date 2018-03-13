@@ -42,8 +42,8 @@
                     Gender :
                 </td>
                 <td>
-                    @Html.RadioButton("Gender",true)Male
-                    @Html.RadioButton("Gender",false)Female
+                    @Html.RadioButton("Gender","Male")Male
+                    @Html.RadioButton("Gender","Female")Female
                 </td>
             </tr>
             <tr>
@@ -62,6 +62,7 @@
                 </td>
             </tr>
         </table>
+        
     }
     @if (ViewBag.Message != null)
     {

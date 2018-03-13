@@ -1,0 +1,532 @@
+﻿@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+
+
+/* {
+  border: 1px solid black;
+} */
+
+:root {
+  --animation-duration: 0.9s;
+  --main-color: #ff8b94;
+  --background-color: #a8e6cf;
+  --ball-animation: halfJump ease-in-out;
+  --rect-animation: rotationClockwise ease-in-out;
+  --font: 'Roboto', sans-serif;
+  --delay: 0s;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+button {
+  border-left: 2px solid var(--main-color);
+  border-top: 2px solid var(--main-color); 
+  border-radius: 3px;
+  outline: none;
+  width: 80.5px;
+  height: 50px;
+  background-color: transparent;
+  font-family: var(--font);
+  font-size: 1.3em;
+  font-weight: 300;
+  color: var(--main-color);
+  cursor: pointer;
+  position: absolute;
+  top: 400px;
+  left: 0;
+  right: 0;
+  margin: auto;  
+}
+
+button:active {
+  border-left: 2px solid #888;
+  border-top: 2px solid #888;
+  border-right: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color); 
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.animation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  top: 10%;
+  transform: scale(1);
+}
+
+.containerRect {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.ball {
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  background-color: var(--main-color);
+  bottom: 49px;
+}
+
+.rect {
+  background-color: var(--main-color);
+  width: 80.5px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 3px;
+}
+
+.animationBall {
+  animation: var(--ball-animation) var(--animation-duration) infinite;
+  -webkit-animation: var(--ball-animation) var(--animation-duration) infinite;
+  -moz-animation: var(--ball-animation) var(--animation-duration) infinite;
+  -o-animation: var(--ball-animation) var(--animation-duration) infinite;
+  animation-delay: var(--delay);
+}
+
+.animationRect {
+  animation: var(--rect-animation) var(--animation-duration) infinite;
+  -webkit-animation: var(--rect-animation) var(--animation-duration) infinite;
+  -moz-animation: var(--rect-animation) var(--animation-duration) infinite;
+  -o-animation: var(--rect-animation) var(--animation-duration) infinite;
+  animation-delay: var(--delay);
+}
+
+/* Rectangle animations */
+
+/* rotation clockwise */
+
+@keyframes rotationClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes rotationClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@-moz-keyframes rotationClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@-o-keyframes rotationClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+/* rotation 360 in one shot */
+
+@keyframes rotation360 {
+  0% {
+    transform: rotate(0deg);
+    height: 50px;
+    width: 50px;
+  }
+  100% {
+    transform: rotate(360deg);
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@-webkit-keyframes rotation360 {
+  0% {
+    transform: rotate(0deg);
+    height: 50px;
+    width: 50px;
+  }
+  100% {
+    transform: rotate(360deg);
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@-moz-keyframes rotation360 {
+  0% {
+    transform: rotate(0deg);
+    height: 50px;
+    width: 50px;
+  }
+  100% {
+    transform: rotate(360deg);
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@-o-keyframes rotation360 {
+  0% {
+    transform: rotate(0deg);
+    height: 50px;
+    width: 50px;
+  }
+  100% {
+    transform: rotate(360deg);
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/* rotation 90 */
+
+@keyframes rotation90 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes rotation90 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes rotation90 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-o-keyframes rotation90 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* springy rectangle */
+
+@keyframes rectStill {
+  0% {
+    height: 50px;
+    width: 50px;
+  }
+  100% {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@-webkit-keyframes rectStill {
+  0% {
+    height: 50px;
+    width: 50px;
+  }
+  100% {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@-moz-keyframes rectStill {
+  0% {
+    height: 50px;
+    width: 50px;
+  }
+  100% {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@-o-keyframes rectStill {
+  0% {
+    height: 50px;
+    width: 50px;
+  }
+  100% {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/* Ball animations */
+
+/* Jump from initial position to an higher one */
+
+@keyframes halfJump {
+  0% {
+    bottom: 49px;
+  }
+  30% {
+    bottom: 77px;
+  }
+  50% {
+    bottom: 64px;
+  }
+  60% {
+    bottom: 73px;
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+@-webkit-keyframes halfJump {
+  0% {
+    bottom: 49px;
+  }
+  30% {
+    bottom: 77px;
+  }
+  50% {
+    bottom: 64px;
+  }
+  60% {
+    bottom: 73px;
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+@-moz-keyframes halfJump {
+  0% {
+    bottom: 49px;
+  }
+  30% {
+    bottom: 77px;
+  }
+  50% {
+    bottom: 64px;
+  }
+  60% {
+    bottom: 73px;
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+@-o-keyframes halfJump {
+  0% {
+    bottom: 49px;
+  }
+  30% {
+    bottom: 77px;
+  }
+  50% {
+    bottom: 64px;
+  }
+  60% {
+    bottom: 73px;
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+/* jump that transform the ball in a square */
+
+@keyframes completeJumpTransformation {
+  0% {
+    bottom: 49px;
+  }
+  40% {
+    bottom: 95px;
+    border-radius: 3px;
+  }
+  60% {
+    bottom: 95px;
+    border-radius: 3px;
+    transform: rotate(90deg);
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+@-webkit-keyframes completeJumpTransformation {
+  0% {
+    bottom: 49px;
+  }
+  40% {
+    bottom: 95px;
+    border-radius: 3px;
+  }
+  60% {
+    bottom: 95px;
+    border-radius: 3px;
+    transform: rotate(90deg);
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+@-moz-keyframes completeJumpTransformation {
+  0% {
+    bottom: 49px;
+  }
+  40% {
+    bottom: 95px;
+    border-radius: 3px;
+  }
+  60% {
+    bottom: 95px;
+    border-radius: 3px;
+    transform: rotate(90deg);
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+@-o-keyframes completeJumpTransformation {
+  0% {
+    bottom: 49px;
+  }
+  40% {
+    bottom: 95px;
+    border-radius: 3px;
+  }
+  60% {
+    bottom: 95px;
+    border-radius: 3px;
+    transform: rotate(90deg);
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+/* jump that return to the same position */
+
+@keyframes completeJump {
+  0% {
+    bottom: 49px;
+  }
+  40% {
+    bottom: 65px;
+  }
+  60% {
+    bottom: 65px;
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+@-webkit-keyframes completeJump {
+  0% {
+    bottom: 49px;
+  }
+  40% {
+    bottom: 65px;
+  }
+  60% {
+    bottom: 65px;
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+@-moz-keyframes completeJump {
+  0% {
+    bottom: 49px;
+  }
+  40% {
+    bottom: 65px;
+  }
+  60% {
+    bottom: 65px;
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
+@-o-keyframes completeJump {
+  0% {
+    bottom: 49px;
+  }
+  40% {
+    bottom: 65px;
+  }
+  60% {
+    bottom: 65px;
+  }
+  100% {
+    bottom: 49px;
+  }
+}
+
